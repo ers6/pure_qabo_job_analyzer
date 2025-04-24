@@ -1,9 +1,9 @@
 # READ_ME
 This jupyter notebook compares 2 csv files of publication metadata pulled from Elsevier's Pure RIMS to determine to isolate deleted records and write them out to a csv file for review. 
 
-## 1. Generate your data for comparison
+## 1. Generate your baseline data 
 
-First, create a subfolder in the same directory you're saving your Python script in. This folder will contain all the research output data held in Pure at a particular point in time. I've named mine 20250425_ros. 
+First, create a subfolder in the same directory you're saving your Python script in. This folder will contain all the research output data held in Pure at a particular point in time. I've named mine 20250320_ros. 
 
 Next, you'll need to populate your folder with data. We gather publication metadata using the reporting module in Pure. If you do not have access to the reporting module, you can still produce a list of research outputs using the Pure API. 
 
@@ -28,6 +28,24 @@ You'll need to create a single sheet and repeat this process for each piece of m
 
 After you create a sheet, export it to csv file and save it in the subdirectory you created in the above step. 
 
+###  Using the Pure API 
 
-##  Using the Pure API 
+If you don't have access to the reporting module you should be able to pull metadata from the API. I haven't done this personally in a while. 
+
+## 2. Generate post QABO data for comparison
+ 
+Wait a week or until you run another QABO job. Then, create another subdirectory in the same directory you've saved your python script. I've named mine 20250327_ros. Then, populate the new directory with data using your prefered method outlined above. Now you're ready to run the Python script and compare the publication data in your Pure instance after the QABO job runs. 
+
+## 3. Run the script 
+
+Launch the jupyter notebook. To do so, you'll need to have jupyter, pandas, and the OS library installed in a virtual environment on your machine. Prior to executing the cells, make sure you set the `this_dir` variable equal to the path on your computer where you've saved the subdirectories containing the publication csv files. 
+
+Before you run the cells under the **Compare QABO Results** header, make sure to set up the `past_qabo` variable equal to the csv file of the compiled data from the past QABO job you created in the above section of the notebook, i.e. 20250327_ros.csv. Likewise, the `current_qabo` should be generated from the compiled data from the current QABO job created in the above section, i.e., 20250402_ros.csv. 
+
+Continue running the notebook to generate a dataframe of research outputs that were present in the `past_qabo` log but are missing in the `current_qabo` log. These entries represent Pure IDs that have been removed from the system between QABO logs. You'll want to investigate these further to understand their deletion from the system. 
+
+
+
+
+
 

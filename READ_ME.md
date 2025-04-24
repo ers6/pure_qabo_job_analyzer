@@ -30,7 +30,7 @@ After you create a sheet, export it to csv file and save it in the subdirectory 
 
 ###  Using the Pure API 
 
-If you don't have access to the reporting module you should be able to pull metadata from the API. I haven't done this personally in a while. 
+If you don't have access to the reporting module you should be able to pull metadata from the API. You'll want to pull the same information outlined above from every research output in your instance. You can save these to individual CSV files as detailed above. For example, send a get call to the API asking it to return every RO with its pure ID and doi, and save the results to a csv file. 
 
 ## 2. Generate post QABO data for comparison
  

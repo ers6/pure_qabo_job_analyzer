@@ -1,5 +1,5 @@
 # READ_ME
-This jupyter notebook compares 2 csv files of publication metadata pulled from Elsevier's Pure RIMS to determine to isolate deleted records and write them out to a csv file for review. 
+This jupyter notebook compares 2 csv files of publication metadata pulled from Elsevier's Pure RIMS to isolate deleted records and write them out to a csv file for review. Please note that we're using the reporting module to pull research output data from pure which has determined the sort of odd data structure. You can get this same information from the Pure API--we just went the quick and dirty route with this one! If you end up using the API, please share! 
 
 ## 1. Generate your baseline data 
 

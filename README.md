@@ -1,6 +1,8 @@
 # READ_ME
 This jupyter notebook compares 2 csv files of publication metadata pulled from Elsevier's Pure RIMS to isolate deleted records and write them out to a csv file for review. Please note that we're using the reporting module to pull research output data from pure which has determined the sort of odd data structure. You can get this same information from the Pure API--we just went the quick and dirty route with this one! If you end up using the API, please share! 
 
+I've included 2 datasets from WashU's Research Profiles captured on 2 different dates (`20250327` and `20250402`) so you can see how this program works and run it using our data if you don't have access to the reporting module. 
+
 ## 1. Generate your baseline data 
 
 First, create a subfolder in the same directory you're saving your Python script in. This folder will contain all the research output data held in Pure at a particular point in time. I've named mine 20250320_ros. 
